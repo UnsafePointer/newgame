@@ -83,7 +83,9 @@ class Fetcher {
         query.append(URLQueryItem(name: "searchType", value: "image"))
         query.append(URLQueryItem(name: "key", value: GoogleCustomSearchCredentials.key))
         if let index = index {
-            query.append(URLQueryItem(name: "start", value: String(index)))
+            if index != 0 {
+                query.append(URLQueryItem(name: "start", value: String(index)))
+            }
         }
         components.queryItems = query
         guard let url = components.url else {
