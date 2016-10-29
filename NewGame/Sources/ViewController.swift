@@ -4,7 +4,7 @@ import FanSabisuKitLite
 
 class ViewController: UIViewController {
 
-    let numberOfImages = 20
+    let numberOfImages = 500
     var progress = 0
     var progressView: UIProgressView?
     let fetcher = Fetcher(session: URLSession.shared)
