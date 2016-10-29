@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F659FC71DC4F85000FDACF0 /* GoogleCustomSearchCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F659FC61DC4F85000FDACF0 /* GoogleCustomSearchCredentials.swift */; };
+		3F659FC91DC4F8C100FDACF0 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F659FC81DC4F8C100FDACF0 /* Fetcher.swift */; };
+		3F659FCB1DC4F98500FDACF0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F659FCA1DC4F98500FDACF0 /* Result.swift */; };
 		3FB8FC3D1DC4F10700F748FD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB8FC3C1DC4F10700F748FD /* Launch Screen.storyboard */; };
 		3FE1CAED1DC4EE4800C2E9F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1CAEC1DC4EE4800C2E9F3 /* AppDelegate.swift */; };
 		3FE1CAEF1DC4EE4800C2E9F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE1CAEE1DC4EE4800C2E9F3 /* ViewController.swift */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F659FC61DC4F85000FDACF0 /* GoogleCustomSearchCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleCustomSearchCredentials.swift; path = Sources/GoogleCustomSearchCredentials.swift; sourceTree = "<group>"; };
+		3F659FC81DC4F8C100FDACF0 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Sources/Fetcher.swift; sourceTree = "<group>"; };
+		3F659FCA1DC4F98500FDACF0 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Result.swift; sourceTree = "<group>"; };
 		3FB8FC3C1DC4F10700F748FD /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Assets/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3FE1CAE91DC4EE4800C2E9F3 /* NewGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE1CAEC1DC4EE4800C2E9F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Sources/AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 			children = (
 				3FE1CAEC1DC4EE4800C2E9F3 /* AppDelegate.swift */,
 				3FE1CAEE1DC4EE4800C2E9F3 /* ViewController.swift */,
+				3F659FC61DC4F85000FDACF0 /* GoogleCustomSearchCredentials.swift */,
+				3F659FC81DC4F8C100FDACF0 /* Fetcher.swift */,
+				3F659FCA1DC4F98500FDACF0 /* Result.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -157,7 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE1CAEF1DC4EE4800C2E9F3 /* ViewController.swift in Sources */,
+				3F659FCB1DC4F98500FDACF0 /* Result.swift in Sources */,
+				3F659FC91DC4F8C100FDACF0 /* Fetcher.swift in Sources */,
 				3FE1CAED1DC4EE4800C2E9F3 /* AppDelegate.swift in Sources */,
+				3F659FC71DC4F85000FDACF0 /* GoogleCustomSearchCredentials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
