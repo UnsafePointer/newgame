@@ -93,6 +93,7 @@ class Fetcher {
         }
         let task = session.dataTask(with: url) { (data, response, error) in
             if (response as? HTTPURLResponse)?.statusCode != 200 {
+                print("\(String(data: data!, encoding: .utf8))")
                 return completionHandler(Result.failure(FetcherError.RequestFailed))
             }
             if let error = error {

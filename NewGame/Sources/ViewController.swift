@@ -43,21 +43,29 @@ class ViewController: UIViewController {
                     downloader.downloadFile(with: url, completionHandler: { (result) in
                         if let url = try? result.resolve() {
                             print("Download finished, file at \(url)")
-                            DispatchQueue.main.async {
-                                self.progress += 1
-                                let progress = Float(self.progress) / Float(self.numberOfImages)
-                                self.progressView?.progress = progress
-                                if progress == 1 {
-                                    let controller = UIAlertController(title: "Done", message: "\(self.numberOfImages) images downloaded", preferredStyle: .alert)
-                                    controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                                    self.present(controller, animated: true, completion: nil)
-                                }
-                            }
+                        } else {
+                            print("Download failed, error \(result)")
+                        }
+                        DispatchQueue.main.async {
+                            self.proccessProgress()
                         }
                     })
                 }
                 self.fetch(with: result.nextIndex)
+            } else {
+                print("Fetch failed, error \(result)")
             }
+        }
+    }
+
+    func proccessProgress() {
+        self.progress += 1
+        let progress = Float(self.progress) / Float(self.numberOfImages)
+        self.progressView?.progress = progress
+        if progress == 1 {
+            let controller = UIAlertController(title: "Done", message: "\(self.numberOfImages) images downloaded", preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(controller, animated: true, completion: nil)
         }
     }
 
