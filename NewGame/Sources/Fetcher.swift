@@ -1,4 +1,5 @@
 import Foundation
+import FanSabisuKitLite
 
 enum ImageSize: String {
     case icon = "icon"
