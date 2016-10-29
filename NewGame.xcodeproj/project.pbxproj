@@ -225,12 +225,13 @@
 				TargetAttributes = {
 					3FE1CAE81DC4EE4800C2E9F3 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 7A5BJMR95M;
 						ProvisioningStyle = Manual;
 					};
 					3FF992F51DC5059E00BD16E2 = {
 						CreatedOnToolsVersion = 8.1;
 						LastSwiftMigration = 0810;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -402,12 +403,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7A5BJMR95M;
 				INFOPLIST_FILE = "$(SRCROOT)/NewGame/Other sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.ruenzuo.NewGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e153249a-cee9-425c-802a-498440c7cb28";
+				PROVISIONING_PROFILE_SPECIFIER = "New Game Development Profile";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
