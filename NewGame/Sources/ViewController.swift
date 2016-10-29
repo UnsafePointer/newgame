@@ -47,23 +47,28 @@ class ViewController: UIViewController {
                             print("Download failed, error \(result)")
                         }
                         DispatchQueue.main.async {
-                            self.proccessProgress()
+                            self.proccess(progress: 1)
                         }
                     })
                 }
                 self.fetch(with: result.nextIndex)
             } else {
                 print("Fetch failed, error \(result)")
+                let pageSize = 10
+                DispatchQueue.main.async {
+                    self.proccess(progress: pageSize)
+                }
+                self.fetch(with: index + pageSize)
             }
         }
     }
 
-    func proccessProgress() {
-        self.progress += 1
-        let progress = Float(self.progress) / Float(self.numberOfImages)
-        self.progressView?.progress = progress
-        if progress == 1 {
-            let controller = UIAlertController(title: "Done", message: "\(self.numberOfImages) images downloaded", preferredStyle: .alert)
+    func proccess(progress: Int) {
+        self.progress += progress
+        let totalProgress = Float(self.progress) / Float(self.numberOfImages)
+        self.progressView?.progress = totalProgress
+        if totalProgress == 1 {
+            let controller = UIAlertController(title: "Done", message: "Operation completed", preferredStyle: .alert)
             controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(controller, animated: true, completion: nil)
         }
